@@ -1,0 +1,437 @@
+@import "tailwindcss";
+
+/* ============================================================
+   SUR-MEZUR — DESIGN SYSTEM
+   Palette extracted from the Sur-MeZur logo (Sur-MeZur.png):
+     deep indigo-violet  #41109B · #5A18C8
+     electric violet     #7A28F0 · #9A4DFF
+     bright accent       #B474FF
+     near-white text     #F4F0FF
+     canvas              #0B0513 (indigo-tinted black)
+   ============================================================ */
+
+@theme {
+  /* --- Brand violet scale ---------------------------------- */
+  --color-violet-100: #f4f0ff;
+  --color-violet-200: #e6dcff;
+  --color-violet-300: #c9b6ff;
+  --color-violet-400: #a98ef5;
+  --color-violet-500: #9a4dff;
+  --color-violet-600: #7a28f0;
+  --color-violet-700: #5a18c8;
+  --color-violet-800: #41109b;
+  --color-violet-900: #2c0870;
+  --color-violet-950: #1c0446;
+
+  /* --- Indigo-tinted canvas (dark) ------------------------- */
+  --color-ink-950: #0b0513;
+  --color-ink-900: #0e0720;
+  --color-ink-850: #130a28;
+  --color-ink-800: #180e32;
+  --color-ink-700: #211240;
+  --color-ink-600: #2d1a55;
+  --color-ink-500: #3c2470;
+
+  /* --- Neutral text ---------------------------------------- */
+  --color-mist-50: #ffffff;
+  --color-mist-100: #f3efff;
+  --color-mist-200: #dcd3f7;
+  --color-mist-300: #bdb0e3;
+  --color-mist-400: #9488bf;
+  --color-mist-500: #6f6699;
+
+  /* --- Typography ------------------------------------------ */
+  --font-display: var(--font-outfit), "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Motion ---------------------------------------------- */
+  --ease-smz: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* --- Layout ---------------------------------------------- */
+  --radius-card: 1.25rem;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nav-h: 4.5rem;
+  }
+
+  * {
+    border-color: color-mix(in oklab, var(--color-mist-300) 12%, transparent);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--nav-h) + 1.5rem);
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-mist-200);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-mist-50);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-violet-600);
+    color: var(--color-mist-50);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-violet-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (pointer: fine) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-ink-950);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-ink-600);
+      border-radius: 99px;
+      border: 3px solid var(--color-ink-950);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-violet-700);
+    }
+  }
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+@utility container-smz {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 84rem;
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+  @media (width >= 80rem) {
+    padding-inline: 3.5rem;
+  }
+}
+
+@utility section-y {
+  padding-block: 5.5rem;
+  @media (width >= 48rem) {
+    padding-block: 7.5rem;
+  }
+  @media (width >= 80rem) {
+    padding-block: 9.5rem;
+  }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-violet-600) 0%,
+    var(--color-violet-500) 55%,
+    var(--color-violet-300) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-mist {
+  background-image: linear-gradient(
+    170deg,
+    var(--color-mist-50) 0%,
+    var(--color-mist-50) 45%,
+    var(--color-mist-300) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility rule-smz {
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--color-violet-700) 60%, transparent) 25%,
+    color-mix(in oklab, var(--color-violet-500) 60%, transparent) 60%,
+    transparent 100%
+  );
+}
+
+@utility surface-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in oklab, var(--color-ink-800) 92%, var(--color-violet-700) 8%) 0%,
+    var(--color-ink-900) 100%
+  );
+  border: 1px solid color-mix(in oklab, var(--color-mist-300) 10%, transparent);
+  border-radius: var(--radius-card);
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-violet-500);
+}
+
+@utility grain {
+  position: relative;
+  isolation: isolate;
+}
+
+@utility step-index {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: color-mix(in oklab, var(--color-mist-300) 14%, transparent);
+}
+
+/* ============================================================
+   COMPONENT PRIMITIVES
+   ============================================================ */
+
+@layer components {
+  .eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+    flex: none;
+  }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* --- Buttons -------------------------------------------- */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.75rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    transition:
+      transform 0.4s var(--ease-smz),
+      box-shadow 0.4s var(--ease-smz),
+      background-color 0.3s var(--ease-smz),
+      border-color 0.3s var(--ease-smz),
+      color 0.3s var(--ease-smz);
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-image: linear-gradient(
+      100deg,
+      var(--color-violet-700) 0%,
+      var(--color-violet-600) 50%,
+      var(--color-violet-500) 100%
+    );
+    background-size: 170% 100%;
+    background-position: 0% 50%;
+    box-shadow: 0 8px 30px -12px color-mix(in oklab, var(--color-violet-600) 70%, transparent);
+    transition:
+      background-position 0.6s var(--ease-smz),
+      transform 0.4s var(--ease-smz),
+      box-shadow 0.4s var(--ease-smz);
+  }
+  .btn-primary:hover {
+    background-position: 100% 50%;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 44px -14px color-mix(in oklab, var(--color-violet-500) 85%, transparent);
+  }
+
+  .btn-ghost {
+    color: var(--color-mist-100);
+    border: 1px solid color-mix(in oklab, var(--color-mist-300) 22%, transparent);
+    background: color-mix(in oklab, var(--color-mist-50) 3%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .btn-ghost:hover {
+    border-color: color-mix(in oklab, var(--color-violet-500) 60%, transparent);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .btn-sm {
+    padding: 0.6875rem 1.125rem;
+    font-size: 0.8125rem;
+  }
+
+  .btn .btn-arrow {
+    transition: transform 0.4s var(--ease-smz);
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  /* --- Spatial animations --------------------------------- */
+  .animate-pulse-soft {
+    animation: smz-pulse 4s var(--ease-smz) infinite;
+  }
+  .animate-drift {
+    animation: smz-drift 18s var(--ease-smz) infinite;
+  }
+  .animate-orbit {
+    animation: smz-orbit 46s linear infinite;
+  }
+  .animate-bob {
+    animation: smz-bob 8s var(--ease-smz) infinite;
+  }
+}
+
+/* ============================================================
+   SCROLL REVEAL  (CSS-driven; JS only flips [data-shown])
+   ============================================================ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  filter: blur(6px);
+  transition:
+    opacity 0.9s var(--ease-smz) var(--reveal-delay, 0ms),
+    transform 0.9s var(--ease-smz) var(--reveal-delay, 0ms),
+    filter 0.9s var(--ease-smz) var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+[data-reveal="left"] {
+  transform: translate3d(-24px, 0, 0);
+}
+[data-reveal="right"] {
+  transform: translate3d(24px, 0, 0);
+}
+[data-reveal="scale"] {
+  transform: scale(0.96);
+}
+
+[data-reveal][data-shown="true"] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  will-change: auto;
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+
+@keyframes smz-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes smz-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -3%, 0) scale(1.06);
+  }
+}
+
+@keyframes smz-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes smz-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes smz-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

@@ -1,0 +1,477 @@
+@import "tailwindcss";
+
+/* ============================================================
+   KORAH — DESIGN SYSTEM
+   Palette sourced directly from the KORAH logo:
+     purple  #72489D   ·   pink  #F280B0
+   Direction: premium technology · African roots · futuristic minimalism
+   ============================================================ */
+
+@theme {
+  /* --- Brand ------------------------------------------------ */
+  --color-korah-purple: #72489d;
+  --color-korah-purple-bright: #8f5cc4;
+  --color-korah-purple-deep: #4a2c68;
+  --color-korah-pink: #f280b0;
+  --color-korah-pink-bright: #ff9cc6;
+  --color-korah-pink-deep: #d1568c;
+
+  /* --- Ink (dark canvas, tinted with the brand purple) ------ */
+  --color-ink-950: #07040d;
+  --color-ink-900: #0b0714;
+  --color-ink-850: #100a1c;
+  --color-ink-800: #150e25;
+  --color-ink-700: #1d1431;
+  --color-ink-600: #2a1e45;
+  --color-ink-500: #3b2c5c;
+
+  /* --- Neutral text ---------------------------------------- */
+  --color-mist-50: #ffffff;
+  --color-mist-100: #f3effa;
+  --color-mist-200: #ddd4ea;
+  --color-mist-300: #bdb0d2;
+  --color-mist-400: #948aab;
+  --color-mist-500: #6f6685;
+
+  /* --- Typography ------------------------------------------ */
+  --font-display: var(--font-outfit), "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Motion ---------------------------------------------- */
+  --ease-korah: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-korah-in: cubic-bezier(0.62, 0, 0.2, 1);
+
+  /* --- Layout ---------------------------------------------- */
+  --radius-card: 1.25rem;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --nav-h: 4.5rem;
+  }
+
+  * {
+    border-color: color-mix(in oklab, var(--color-mist-300) 12%, transparent);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--nav-h) + 1.5rem);
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-mist-200);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-mist-50);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-korah-pink);
+    color: var(--color-ink-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-korah-pink);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (pointer: fine) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-ink-950);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-ink-600);
+      border-radius: 99px;
+      border: 3px solid var(--color-ink-950);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-korah-purple);
+    }
+  }
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+@utility container-korah {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 84rem;
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+  @media (width >= 80rem) {
+    padding-inline: 3.5rem;
+  }
+}
+
+@utility section-y {
+  padding-block: 5.5rem;
+  @media (width >= 48rem) {
+    padding-block: 7.5rem;
+  }
+  @media (width >= 80rem) {
+    padding-block: 9.5rem;
+  }
+}
+
+@utility text-gradient-korah {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-korah-purple-bright) 0%,
+    var(--color-korah-pink) 55%,
+    var(--color-korah-pink-bright) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-mist {
+  background-image: linear-gradient(
+    170deg,
+    var(--color-mist-50) 0%,
+    var(--color-mist-50) 45%,
+    var(--color-mist-300) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility rule-korah {
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--color-korah-purple) 60%, transparent) 25%,
+    color-mix(in oklab, var(--color-korah-pink) 60%, transparent) 60%,
+    transparent 100%
+  );
+}
+
+@utility surface-card {
+  background: linear-gradient(
+    160deg,
+    color-mix(in oklab, var(--color-ink-800) 92%, var(--color-korah-purple) 8%) 0%,
+    var(--color-ink-900) 100%
+  );
+  border: 1px solid color-mix(in oklab, var(--color-mist-300) 10%, transparent);
+  border-radius: var(--radius-card);
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-korah-pink);
+}
+
+@utility grain {
+  position: relative;
+  isolation: isolate;
+}
+
+/* ============================================================
+   COMPONENT PRIMITIVES
+   ============================================================ */
+
+@layer components {
+  .eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+    flex: none;
+  }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* --- Buttons -------------------------------------------- */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.75rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    transition:
+      transform 0.4s var(--ease-korah),
+      box-shadow 0.4s var(--ease-korah),
+      background-color 0.3s var(--ease-korah),
+      border-color 0.3s var(--ease-korah),
+      color 0.3s var(--ease-korah);
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-image: linear-gradient(
+      100deg,
+      var(--color-korah-purple) 0%,
+      var(--color-korah-pink) 100%
+    );
+    background-size: 160% 100%;
+    background-position: 0% 50%;
+    box-shadow: 0 8px 30px -12px color-mix(in oklab, var(--color-korah-pink) 70%, transparent);
+    transition:
+      background-position 0.6s var(--ease-korah),
+      transform 0.4s var(--ease-korah),
+      box-shadow 0.4s var(--ease-korah);
+  }
+  .btn-primary:hover {
+    background-position: 100% 50%;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 44px -14px color-mix(in oklab, var(--color-korah-pink) 85%, transparent);
+  }
+
+  .btn-ghost {
+    color: var(--color-mist-100);
+    border: 1px solid color-mix(in oklab, var(--color-mist-300) 22%, transparent);
+    background: color-mix(in oklab, var(--color-mist-50) 3%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .btn-ghost:hover {
+    border-color: color-mix(in oklab, var(--color-korah-pink) 55%, transparent);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .btn-sm {
+    padding: 0.6875rem 1.125rem;
+    font-size: 0.8125rem;
+  }
+
+  .btn[disabled],
+  .btn[aria-disabled="true"] {
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .btn .btn-arrow {
+    transition: transform 0.4s var(--ease-korah);
+  }
+  .btn:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  /* --- Text link ------------------------------------------ */
+  .link-korah {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-mist-100);
+    font-weight: 500;
+    transition: color 0.3s var(--ease-korah);
+  }
+  .link-korah:hover {
+    color: var(--color-korah-pink);
+  }
+
+  /* --- Form fields ---------------------------------------- */
+  .field {
+    width: 100%;
+    border-radius: 0.875rem;
+    border: 1px solid color-mix(in oklab, var(--color-mist-300) 14%, transparent);
+    background: color-mix(in oklab, var(--color-ink-800) 70%, transparent);
+    padding: 0.9375rem 1.125rem;
+    font-size: 0.9375rem;
+    color: var(--color-mist-100);
+    transition:
+      border-color 0.3s var(--ease-korah),
+      background-color 0.3s var(--ease-korah);
+  }
+  .field::placeholder {
+    color: var(--color-mist-500);
+  }
+  .field:hover {
+    border-color: color-mix(in oklab, var(--color-mist-300) 24%, transparent);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-korah-pink);
+    background: color-mix(in oklab, var(--color-ink-800) 92%, transparent);
+  }
+  .field[aria-invalid="true"] {
+    border-color: #f4737a;
+  }
+  .field-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-mist-400);
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ============================================================
+   SCROLL REVEAL  (CSS-driven; JS only flips [data-shown])
+   ============================================================ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  filter: blur(6px);
+  transition:
+    opacity 0.9s var(--ease-korah) var(--reveal-delay, 0ms),
+    transform 0.9s var(--ease-korah) var(--reveal-delay, 0ms),
+    filter 0.9s var(--ease-korah) var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+[data-reveal="left"] {
+  transform: translate3d(-24px, 0, 0);
+}
+[data-reveal="right"] {
+  transform: translate3d(24px, 0, 0);
+}
+[data-reveal="scale"] {
+  transform: scale(0.96);
+}
+
+[data-reveal][data-shown="true"] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  will-change: auto;
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+
+@keyframes korah-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -3%, 0) scale(1.06);
+  }
+}
+
+@keyframes korah-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes korah-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes korah-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes korah-dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+.animate-drift {
+  animation: korah-drift 18s var(--ease-korah) infinite;
+}
+.animate-orbit {
+  animation: korah-orbit 44s linear infinite;
+}
+.animate-pulse-soft {
+  animation: korah-pulse 4s var(--ease-korah) infinite;
+}
+.animate-marquee {
+  animation: korah-marquee 46s linear infinite;
+}
+.animate-dash {
+  animation: korah-dash 14s linear infinite;
+}
+
+/* ============================================================
+   REDUCED MOTION — spec §33 / §34
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
