@@ -26,3 +26,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# raw photo drops — processed into public/photos by scripts/optimize-photos.mjs
+photos-src/

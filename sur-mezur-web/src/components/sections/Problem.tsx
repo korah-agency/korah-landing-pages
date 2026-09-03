@@ -1,4 +1,6 @@
+import { photos } from "@/data/photos";
 import type { Dictionary } from "@/i18n";
+import { Photo } from "@/components/ui/Photo";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -17,17 +19,30 @@ export function Problem({ dict }: { dict: Dictionary }) {
       aria-labelledby="problem-title"
     >
       <div className="container-smz">
-        <SectionHeader title={<span id="problem-title">{dict.problem.title}</span>} />
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.62fr)_minmax(0,1fr)] lg:gap-16">
+          <Reveal from="left" className="group order-2 lg:order-1">
+            <Photo
+              src={photos.problemTape}
+              alt="Two hands looping a tape measure around a dress form, a notebook of handwritten figures beside them."
+              ratio="4/5"
+              sizes="(min-width: 1024px) 36vw, 100vw"
+            />
+          </Reveal>
 
-        <div aria-hidden className="mt-10 flex flex-wrap items-center justify-center gap-4 font-display text-xl text-mist-300">
-          {[dict.problem.chain1, dict.problem.chain2, dict.problem.chain3, dict.problem.chain4].map(
-            (item, index) => (
-              <span key={item} className="flex items-center gap-4">
-                {index > 0 ? <span className="text-violet-500">→</span> : null}
-                <span>{item}</span>
-              </span>
-            ),
-          )}
+          <div className="order-1 lg:order-2">
+            <SectionHeader title={<span id="problem-title">{dict.problem.title}</span>} />
+
+            <div aria-hidden className="mt-10 flex flex-wrap items-center gap-4 font-display text-xl text-mist-300">
+              {[dict.problem.chain1, dict.problem.chain2, dict.problem.chain3, dict.problem.chain4].map(
+                (item, index) => (
+                  <span key={item} className="flex items-center gap-4">
+                    {index > 0 ? <span className="text-violet-500">→</span> : null}
+                    <span>{item}</span>
+                  </span>
+                ),
+              )}
+            </div>
+          </div>
         </div>
 
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">

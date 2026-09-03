@@ -1,6 +1,8 @@
+import Image from "next/image";
+
+import { photos } from "@/data/photos";
 import type { Dictionary } from "@/i18n";
 import { Reveal } from "@/components/ui/Reveal";
-import { AvatarStage } from "@/components/visuals/AvatarStage";
 
 export function AvatarSection({ dict }: { dict: Dictionary }) {
   const chips = [dict.avatar.c1, dict.avatar.c2, dict.avatar.c3, dict.avatar.c4, dict.avatar.c5];
@@ -28,8 +30,20 @@ export function AvatarSection({ dict }: { dict: Dictionary }) {
           </p>
         </Reveal>
 
+        {/*
+          The section promises "see yourself in 3D"; it now shows the render
+          rather than a diagram of one. Cut out, so it sits straight on the page.
+        */}
         <Reveal delay={240} className="w-full">
-          <AvatarStage />
+          <div className="animate-bob relative mx-auto mt-10 h-[26rem] w-full max-w-[22rem] sm:h-[32rem] sm:max-w-[26rem]">
+            <Image
+              src={photos.avatar3d}
+              alt="A 3D body model covered in a fine violet wireframe, with measurement rings at chest, waist and hips."
+              fill
+              sizes="(min-width: 640px) 26rem, 90vw"
+              className="object-contain"
+            />
+          </div>
         </Reveal>
 
         <Reveal delay={300}>

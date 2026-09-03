@@ -8,6 +8,8 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { ForClients } from "@/components/sections/ForClients";
 import { ForTailors } from "@/components/sections/ForTailors";
 import { FutureSection } from "@/components/sections/FutureSection";
+import { AtelierBand } from "@/components/sections/AtelierBand";
+import { FabricBand } from "@/components/sections/FabricBand";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Measurements } from "@/components/sections/Measurements";
@@ -42,6 +44,7 @@ export default async function Home({ params }: Params) {
   return (
     <>
       <Hero locale={active} dict={dict} />
+      <AtelierBand dict={dict} />
       <TrustStrip dict={dict} />
       <Problem dict={dict} />
       <NewWay dict={dict} />
@@ -56,6 +59,7 @@ export default async function Home({ params }: Params) {
       <FutureSection dict={dict} />
       <WhySurMeZur dict={dict} />
       <Differentiation dict={dict} />
+      <FabricBand dict={dict} />
       <Proof dict={dict} />
       <Privacy dict={dict} />
       <Pricing locale={active} dict={dict} />
