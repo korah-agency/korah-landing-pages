@@ -7,7 +7,7 @@ const PIPELINE = ["stage1", "stage2", "stage3"] as const;
 export function Technology({ dict }: { dict: Dictionary }) {
   return (
     <section
-      className="section-y relative border-t border-white/[0.06] bg-ink-900"
+      className="section-y relative border-t border-violet-950/[0.08] bg-ink-900"
       id="technology"
       aria-labelledby="tech-title"
     >
@@ -24,7 +24,7 @@ export function Technology({ dict }: { dict: Dictionary }) {
               {[dict.tech.p1, dict.tech.p2, dict.tech.p3, dict.tech.p4, dict.tech.p5].map((pill) => (
                 <li
                   key={pill}
-                  className="rounded-full border border-violet-600/35 bg-violet-900/15 px-3.5 py-1.5 text-xs font-medium text-violet-200"
+                  className="rounded-full border border-violet-600/30 bg-violet-100/70 px-3.5 py-1.5 text-xs font-medium text-violet-800"
                 >
                   {pill}
                 </li>
@@ -37,11 +37,11 @@ export function Technology({ dict }: { dict: Dictionary }) {
           <Reveal from="right" delay={120}>
             <div className="surface-card flex flex-col items-center gap-2.5 p-8 font-display text-[0.9375rem]">
               <div className="flex items-center gap-3">
-                <span className="rounded-full border border-white/15 px-6 py-3 text-mist-100">
+                <span className="rounded-full border border-violet-950/16 px-6 py-3 text-mist-100">
                   {dict.tech.pipe1}
                 </span>
                 <span className="text-violet-500">+</span>
-                <span className="rounded-full border border-white/15 px-6 py-3 text-mist-100">
+                <span className="rounded-full border border-violet-950/16 px-6 py-3 text-mist-100">
                   {dict.tech.pipe2}
                 </span>
               </div>
@@ -50,7 +50,7 @@ export function Technology({ dict }: { dict: Dictionary }) {
 
               {PIPELINE.map((stage, index) => (
                 <span key={stage} className="flex flex-col items-center gap-2.5">
-                  <span className="rounded-full border border-white/15 px-6 py-3 text-violet-300">
+                  <span className="rounded-full border border-violet-950/16 px-6 py-3 text-violet-700">
                     {dict.tech[stage]}
                   </span>
                   {index === PIPELINE.length - 1 ? (
@@ -61,7 +61,7 @@ export function Technology({ dict }: { dict: Dictionary }) {
                 </span>
               ))}
 
-              <span className="rounded-full border border-white/15 px-6 py-3 text-mist-100">
+              <span className="rounded-full border border-violet-950/16 px-6 py-3 text-mist-100">
                 {dict.tech.result1}
               </span>
 

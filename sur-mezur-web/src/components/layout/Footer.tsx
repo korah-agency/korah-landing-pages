@@ -20,13 +20,13 @@ export function Footer({ locale, dict }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.07] bg-ink-950">
+    <footer className="relative overflow-hidden border-t border-violet-950/[0.09] bg-ink-950">
       <div
         aria-hidden
         className="pointer-events-none absolute -bottom-64 left-1/2 h-[32rem] w-[64rem] -translate-x-1/2 rounded-full opacity-[0.2] blur-[80px]"
         style={{
           background:
-            "radial-gradient(closest-side, #5A18C8 0%, rgba(122,40,240,0.5) 45%, transparent 100%)",
+            "radial-gradient(closest-side, #4502AD 0%, rgba(93,6,204,0.45) 45%, transparent 100%)",
         }}
       />
 
@@ -36,7 +36,7 @@ export function Footer({ locale, dict }: FooterProps) {
             <Link href={localizedPath(locale, "/")} aria-label="Sur-MeZur" className="w-fit">
               <Logo size={64} />
             </Link>
-            <p className="font-display text-xl text-white">{dict.footer.tagline}</p>
+            <p className="font-display text-xl text-mist-50">{dict.footer.tagline}</p>
             <p className="max-w-sm text-sm leading-relaxed text-mist-400">{dict.footer.blurb}</p>
           </div>
 
@@ -52,7 +52,7 @@ export function Footer({ locale, dict }: FooterProps) {
                 <li key={item.key}>
                   <a
                     href={localizePath(locale, item.hash)}
-                    className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-400"
+                    className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-600"
                   >
                     {dict.footer[item.key]}
                   </a>
@@ -72,7 +72,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <a
                   href={localizePath(locale, "#why-surmezur")}
-                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-400"
+                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-600"
                 >
                   {dict.footer.c1}
                 </a>
@@ -82,7 +82,7 @@ export function Footer({ locale, dict }: FooterProps) {
                   href={siteConfig.parent.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-400"
+                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-600"
                 >
                   {dict.footer.c2}
                 </a>
@@ -101,7 +101,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-400"
+                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-600"
                 >
                   {dict.footer.s1}
                 </a>
@@ -109,7 +109,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <a
                   href={localizePath(locale, "#privacy")}
-                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-400"
+                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-600"
                 >
                   {dict.footer.s2}
                 </a>
@@ -117,7 +117,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <a
                   href={localizePath(locale, "#privacy")}
-                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-400"
+                  className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-600"
                 >
                   {dict.footer.s3}
                 </a>
@@ -136,7 +136,7 @@ export function Footer({ locale, dict }: FooterProps) {
                     href={social.href}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-400"
+                    className="text-sm text-mist-300 transition-colors duration-300 hover:text-violet-600"
                   >
                     {social.label}
                   </a>

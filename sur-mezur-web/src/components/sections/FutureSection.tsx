@@ -19,7 +19,7 @@ export function FutureSection({ dict }: { dict: Dictionary }) {
 
   return (
     <section
-      className="section-y relative border-t border-white/[0.06] bg-ink-900"
+      className="section-y relative border-t border-violet-950/[0.08] bg-ink-900"
       aria-labelledby="future-title"
     >
       <div className="container-smz">
@@ -39,7 +39,7 @@ export function FutureSection({ dict }: { dict: Dictionary }) {
                   className={
                     index === flow.length - 1
                       ? "rounded-2xl bg-gradient-to-r from-violet-800 to-violet-600 px-6 py-4 font-display text-mist-50"
-                      : "rounded-2xl border border-white/14 bg-violet-900/15 px-6 py-4 font-display text-mist-200"
+                      : "rounded-2xl border border-violet-950/15 bg-violet-900/15 px-6 py-4 font-display text-mist-200"
                   }
                 >
                   {step}
@@ -50,13 +50,13 @@ export function FutureSection({ dict }: { dict: Dictionary }) {
         </Reveal>
 
         <Reveal delay={160}>
-          <div className="mt-16 rounded-2xl border border-white/10 bg-gradient-to-br from-ink-800/95 to-ink-900 p-10 text-center">
-            <h3 className="text-2xl text-white">{dict.eco.title}</h3>
+          <div className="mt-16 rounded-2xl border border-violet-950/12 bg-gradient-to-br from-ink-800/95 to-ink-900 p-10 text-center">
+            <h3 className="text-2xl text-mist-50">{dict.eco.title}</h3>
             <ul className="mt-6 flex flex-wrap justify-center gap-2.5">
               {ecosystem.map((item, index) => (
                 <li
                   key={item}
-                  className="rounded-full border border-violet-600/30 bg-violet-800/25 px-4.5 py-2.5 text-sm text-violet-100"
+                  className="rounded-full border border-violet-600/25 bg-violet-100/70 px-4.5 py-2.5 text-sm text-violet-800"
                   style={{ opacity: 0.6 + Math.min(index, 4) * 0.1 }}
                 >
                   {item}

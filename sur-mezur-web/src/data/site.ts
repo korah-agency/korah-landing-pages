@@ -13,12 +13,13 @@ export const siteConfig = {
     name: "KORAH",
     url: "https://korah.tech",
   },
+  /** Sampled from the logo composited over white (public/brand/Sur-MeZur.png). */
   brand: {
-    deep: "#41109B",
-    base: "#6B20E8",
-    bright: "#9A4DFF",
-    accent: "#B474FF",
-    ink: "#0B0513",
+    indigo: "#08044D",
+    deep: "#4502AD",
+    base: "#5D06CC",
+    bright: "#8C29FB",
+    paper: "#FFFFFF",
   },
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/korah.tech" },

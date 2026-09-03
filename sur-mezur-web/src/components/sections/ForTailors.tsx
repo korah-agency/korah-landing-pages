@@ -12,7 +12,7 @@ export function ForTailors({ dict }: { dict: Dictionary }) {
 
   return (
     <section
-      className="section-y relative border-t border-white/[0.06] bg-ink-900"
+      className="section-y relative border-t border-violet-950/[0.08] bg-ink-900"
       id="for-tailors"
       aria-labelledby="tailors-title"
     >
@@ -27,7 +27,7 @@ export function ForTailors({ dict }: { dict: Dictionary }) {
             <Reveal key={benefit.index} delay={index * 100}>
               <article className="surface-card group flex h-full flex-col gap-3 p-7 transition-[transform,border-color] duration-500 ease-[var(--ease-smz)] hover:-translate-y-1 hover:border-violet-500/35">
                 <p className="font-display text-3xl leading-none text-violet-500/50">{benefit.index}</p>
-                <h3 className="mt-3 text-xl text-white">{benefit.title}</h3>
+                <h3 className="mt-3 text-xl text-mist-50">{benefit.title}</h3>
                 <p className="text-[0.9375rem] leading-relaxed text-mist-400">{benefit.body}</p>
               </article>
             </Reveal>

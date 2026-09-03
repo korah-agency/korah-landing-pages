@@ -23,7 +23,7 @@ export function WhySurMeZur({ dict }: { dict: Dictionary }) {
             <Reveal key={pillar.index} delay={index * 120}>
               <article className="surface-card group flex h-full flex-col gap-4 p-8 transition-[transform,border-color] duration-500 ease-[var(--ease-smz)] hover:-translate-y-1 hover:border-violet-500/35">
                 <p className="font-display text-3xl leading-none text-violet-500/50">{pillar.index}</p>
-                <h3 className="text-2xl text-white">{pillar.title}</h3>
+                <h3 className="text-2xl text-mist-50">{pillar.title}</h3>
                 <p className="text-[0.9375rem] leading-relaxed text-mist-400">{pillar.body}</p>
               </article>
             </Reveal>

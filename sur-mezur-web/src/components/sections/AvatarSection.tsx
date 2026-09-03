@@ -7,7 +7,7 @@ export function AvatarSection({ dict }: { dict: Dictionary }) {
 
   return (
     <section
-      className="section-y relative overflow-hidden bg-[radial-gradient(80%_100%_at_50%_0%,#211240_0%,#0E0720_100%)]"
+      className="section-y relative overflow-hidden bg-[radial-gradient(80%_100%_at_50%_0%,#F4EEFF_0%,#FFFFFF_100%)]"
       aria-labelledby="avatar-title"
     >
       <div className="container-smz flex flex-col items-center text-center">
@@ -37,7 +37,7 @@ export function AvatarSection({ dict }: { dict: Dictionary }) {
             {chips.map((chip) => (
               <li
                 key={chip}
-                className="rounded-full border border-white/16 px-4 py-2 text-[0.8125rem] font-medium text-mist-200"
+                className="rounded-full border border-violet-950/16 px-4 py-2 text-[0.8125rem] font-medium text-mist-200"
               >
                 {chip}
               </li>

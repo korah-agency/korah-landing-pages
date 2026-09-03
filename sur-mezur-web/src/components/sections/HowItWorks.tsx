@@ -5,9 +5,9 @@ import { Reveal } from "@/components/ui/Reveal";
 function CaptureIcon() {
   return (
     <svg viewBox="0 0 64 64" fill="none" aria-hidden className="h-12 w-12">
-      <rect x="14" y="8" width="36" height="48" rx="8" stroke="#B474FF" strokeWidth="2" />
-      <circle cx="32" cy="26" r="6" stroke="#B474FF" strokeWidth="2" />
-      <path d="M22 44c2-6 6-9 10-9s8 3 10 9" stroke="#B474FF" strokeWidth="2" strokeLinecap="round" />
+      <rect x="14" y="8" width="36" height="48" rx="8" stroke="#7014E8" strokeWidth="2" />
+      <circle cx="32" cy="26" r="6" stroke="#7014E8" strokeWidth="2" />
+      <path d="M22 44c2-6 6-9 10-9s8 3 10 9" stroke="#7014E8" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -15,17 +15,17 @@ function CaptureIcon() {
 function AnalyzeIcon() {
   return (
     <svg viewBox="0 0 64 64" fill="none" aria-hidden className="h-12 w-12">
-      <circle cx="32" cy="32" r="18" stroke="#9A4DFF" strokeWidth="2" />
+      <circle cx="32" cy="32" r="18" stroke="#5D06CC" strokeWidth="2" />
       <circle
         cx="32"
         cy="32"
         r="18"
-        stroke="#9A4DFF"
+        stroke="#5D06CC"
         strokeWidth="2"
         strokeDasharray="3 8"
         className="animate-pulse-soft"
       />
-      <path d="M22 22l8 8M40 40l8 8M22 42l8-8" stroke="#6B20E8" strokeWidth="2" strokeLinecap="round" />
+      <path d="M22 22l8 8M40 40l8 8M22 42l8-8" stroke="#5D06CC" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -33,8 +33,8 @@ function AnalyzeIcon() {
 function MeasureIcon() {
   return (
     <svg viewBox="0 0 64 64" fill="none" aria-hidden className="h-12 w-12">
-      <rect x="10" y="14" width="44" height="36" rx="6" stroke="#B474FF" strokeWidth="2" />
-      <path d="M18 30h10M18 38h22M36 30h10" stroke="#6B20E8" strokeWidth="2" strokeLinecap="round" />
+      <rect x="10" y="14" width="44" height="36" rx="6" stroke="#7014E8" strokeWidth="2" />
+      <path d="M18 30h10M18 38h22M36 30h10" stroke="#5D06CC" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -66,7 +66,7 @@ export function HowItWorks({ dict }: { dict: Dictionary }) {
                 <div className="grid h-14 w-14 place-items-center rounded-2xl border border-violet-600/30 bg-violet-900/20">
                   {step.icon}
                 </div>
-                <h3 className="text-2xl text-white">{step.title}</h3>
+                <h3 className="text-2xl text-mist-50">{step.title}</h3>
                 <p className="text-[0.9375rem] leading-relaxed text-mist-400">{step.body}</p>
               </article>
             </Reveal>

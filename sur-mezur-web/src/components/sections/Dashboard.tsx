@@ -23,7 +23,7 @@ export function Dashboard({ locale, dict }: { locale: Locale; dict: Dictionary }
 
   return (
     <section
-      className="section-y relative border-t border-white/[0.06] bg-ink-900"
+      className="section-y relative border-t border-violet-950/[0.08] bg-ink-900"
       aria-labelledby="dash-title"
     >
       <div className="container-smz">
@@ -49,7 +49,7 @@ export function Dashboard({ locale, dict }: { locale: Locale; dict: Dictionary }
                 {fields.map((field) => (
                   <div
                     key={field.k}
-                    className="flex items-baseline justify-between border-b border-white/[0.07] py-2.5"
+                    className="flex items-baseline justify-between border-b border-violet-950/[0.09] py-2.5"
                   >
                     <span className="text-sm text-mist-400">{field.k}</span>
                     <span className="font-display text-base text-mist-100">{field.v}</span>
@@ -63,7 +63,7 @@ export function Dashboard({ locale, dict }: { locale: Locale; dict: Dictionary }
                 {measurements.map((m) => (
                   <div
                     key={m.k}
-                    className="flex items-baseline justify-between border-b border-white/[0.07] py-2.5"
+                    className="flex items-baseline justify-between border-b border-violet-950/[0.09] py-2.5"
                   >
                     <span className="text-sm text-mist-400">{m.k}</span>
                     <span className="font-display text-base text-mist-100">{m.v}</span>

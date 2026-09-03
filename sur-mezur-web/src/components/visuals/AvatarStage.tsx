@@ -14,12 +14,12 @@ export function AvatarStage() {
       <svg
         viewBox="0 0 220 440"
         className="animate-bob relative z-10 h-full max-h-[26rem]"
-        style={{ filter: "drop-shadow(0 0 30px rgba(122,40,240,0.45))" }}
+        style={{ filter: "drop-shadow(0 0 30px rgba(93,6,204,0.22))" }}
       >
         <defs>
           <linearGradient id="av-body" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#5A18C8" />
-            <stop offset="100%" stopColor="#B474FF" />
+            <stop offset="0%" stopColor="#4502AD" />
+            <stop offset="100%" stopColor="#7014E8" />
           </linearGradient>
         </defs>
         <circle cx="110" cy="64" r="26" fill="url(#av-body)" opacity="0.85" />
@@ -29,9 +29,9 @@ export function AvatarStage() {
           opacity="0.6"
         />
         <path d="M63 172h94M59 214h102M63 258h94" stroke="#fff" strokeWidth="1.4" strokeDasharray="4 5" opacity="0.85" />
-        <circle cx="110" cy="172" r="3.5" fill="#fff" className="animate-pulse-soft" />
-        <circle cx="110" cy="214" r="3.5" fill="#fff" className="animate-pulse-soft" style={{ animationDelay: "0.5s" }} />
-        <circle cx="110" cy="258" r="3.5" fill="#fff" className="animate-pulse-soft" style={{ animationDelay: "1s" }} />
+        <circle cx="110" cy="172" r="3.5" fill="#08044D" className="animate-pulse-soft" />
+        <circle cx="110" cy="214" r="3.5" fill="#08044D" className="animate-pulse-soft" style={{ animationDelay: "0.5s" }} />
+        <circle cx="110" cy="258" r="3.5" fill="#08044D" className="animate-pulse-soft" style={{ animationDelay: "1s" }} />
         <ellipse cx="110" cy="330" rx="30" ry="16" fill="url(#av-body)" opacity="0.5" />
       </svg>
     </div>

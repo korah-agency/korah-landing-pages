@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Jost, Playfair_Display } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
@@ -11,22 +11,28 @@ import { defaultLocale, htmlLang, isLocale, locales, type Locale } from "@/i18n/
 
 import "../globals.css";
 
-const outfit = Outfit({
+/*
+ * The wordmark in the logo is a high-contrast Didone; Playfair Display is the
+ * closest match available as a variable web font. Jost is the geometric
+ * companion that echoes the tagline set in wide capitals underneath it.
+ */
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-playfair",
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const inter = Inter({
+const jost = Jost({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jost",
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: siteConfig.brand.ink,
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
 };
@@ -119,7 +125,16 @@ export default async function LocaleLayout({
   const dict = getDictionary(active);
 
   return (
-    <html lang={htmlLang[active]} className={`${outfit.variable} ${inter.variable}`}>
+    <html lang={htmlLang[active]} className={`${playfair.variable} ${jost.variable}`}>
+      <head>
+        {/*
+          Scroll reveals start at opacity:0 and are switched on by JS. Without
+          scripts that would hide the page, so no-JS gets them shown.
+        */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}`}</style>
+        </noscript>
+      </head>
       <body className="min-h-screen antialiased">
         <Navbar locale={active} dict={dict} />
         <main id="main">{children}</main>

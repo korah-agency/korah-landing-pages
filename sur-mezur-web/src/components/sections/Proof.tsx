@@ -5,8 +5,8 @@ import { Reveal } from "@/components/ui/Reveal";
 function PrototypeIcon() {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden className="h-9 w-9">
-      <rect x="4" y="6" width="24" height="20" rx="3" stroke="#B474FF" strokeWidth="2" />
-      <path d="M12 16h8M16 12v8" stroke="#B474FF" strokeWidth="2" strokeLinecap="round" />
+      <rect x="4" y="6" width="24" height="20" rx="3" stroke="#7014E8" strokeWidth="2" />
+      <path d="M12 16h8M16 12v8" stroke="#7014E8" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -14,9 +14,9 @@ function PrototypeIcon() {
 function PipelineIcon() {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden className="h-9 w-9">
-      <circle cx="16" cy="16" r="11" stroke="#9A4DFF" strokeWidth="2" />
-      <circle cx="16" cy="16" r="11" stroke="#9A4DFF" strokeWidth="2" strokeDasharray="2 6" />
-      <path d="M16 10v6l4 3" stroke="#9A4DFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="16" cy="16" r="11" stroke="#5D06CC" strokeWidth="2" />
+      <circle cx="16" cy="16" r="11" stroke="#5D06CC" strokeWidth="2" strokeDasharray="2 6" />
+      <path d="M16 10v6l4 3" stroke="#5D06CC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -24,8 +24,8 @@ function PipelineIcon() {
 function BodyIcon() {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden className="h-9 w-9">
-      <circle cx="16" cy="16" r="12" stroke="#6B20E8" strokeWidth="2" />
-      <circle cx="16" cy="16" r="6" fill="#6B20E8" opacity="0.4" />
+      <circle cx="16" cy="16" r="12" stroke="#5D06CC" strokeWidth="2" />
+      <circle cx="16" cy="16" r="6" fill="#5D06CC" opacity="0.4" />
     </svg>
   );
 }
@@ -33,7 +33,7 @@ function BodyIcon() {
 function VisionIcon() {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden className="h-9 w-9">
-      <path d="M6 22c6 0 8-8 14-8s8 6 12 6" stroke="#B474FF" strokeWidth="2" strokeLinecap="round" strokeDasharray="3 3" />
+      <path d="M6 22c6 0 8-8 14-8s8 6 12 6" stroke="#7014E8" strokeWidth="2" strokeLinecap="round" strokeDasharray="3 3" />
     </svg>
   );
 }
@@ -61,7 +61,7 @@ export function Proof({ dict }: { dict: Dictionary }) {
             <Reveal key={item.title} delay={index * 90}>
               <article className="surface-card group flex h-full flex-col gap-3 p-7 transition-[transform,border-color] duration-500 ease-[var(--ease-smz)] hover:-translate-y-1 hover:border-violet-500/35">
                 {item.icon}
-                <h3 className="mt-2 text-lg text-white">{item.title}</h3>
+                <h3 className="mt-2 text-lg text-mist-50">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-mist-400">{item.body}</p>
               </article>
             </Reveal>

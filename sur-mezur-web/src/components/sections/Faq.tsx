@@ -11,7 +11,7 @@ export function Faq({ dict }: { dict: Dictionary }) {
 
   return (
     <section
-      className="section-y relative border-t border-white/[0.06] bg-ink-900"
+      className="section-y relative border-t border-violet-950/[0.08] bg-ink-900"
       id="faq"
       aria-labelledby="faq-title"
     >
@@ -27,13 +27,13 @@ export function Faq({ dict }: { dict: Dictionary }) {
             {questions.map((item, index) => (
               <details
                 key={index}
-                className="group overflow-hidden rounded-2xl border border-white/10 bg-ink-800/55 transition-colors duration-400 hover:border-violet-600/40 open:border-violet-600/50"
+                className="group overflow-hidden rounded-2xl border border-violet-950/12 bg-ink-800/55 transition-colors duration-400 hover:border-violet-600/40 open:border-violet-600/50"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-display text-lg text-mist-100 [&::-webkit-details-marker]:hidden">
                   {item.q}
                   <span
                     aria-hidden
-                    className="grid h-7 w-7 flex-none place-items-center rounded-full border border-violet-600/40 text-violet-400 transition-transform duration-400 group-open:rotate-45 group-open:bg-violet-600 group-open:text-white"
+                    className="grid h-7 w-7 flex-none place-items-center rounded-full border border-violet-600/40 text-violet-600 transition-transform duration-400 group-open:rotate-45 group-open:bg-violet-600 group-open:text-mist-50"
                   >
                     +
                   </span>

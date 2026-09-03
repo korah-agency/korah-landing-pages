@@ -6,14 +6,14 @@ import { ArrowRight } from "@/components/ui/Icons";
 export function FinalCta({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <section
-      className="grain section-y relative overflow-hidden bg-[radial-gradient(90%_120%_at_50%_100%,#211240_0%,#0E0720_55%,#0B0513_100%)]"
+      className="grain section-y relative overflow-hidden bg-[radial-gradient(90%_120%_at_50%_100%,#F4EEFF_0%,#FBF9FF_55%,#FFFFFF_100%)]"
       id="final-cta"
       aria-labelledby="final-title"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="animate-drift absolute -top-[30%] left-[8%] h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(closest-side,#5A18C8,rgba(90,24,200,0))] opacity-50 blur-[110px]" />
+        <div className="animate-drift absolute -top-[30%] left-[8%] h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(closest-side,#4502AD,rgba(93,6,204,0))] opacity-[0.16] blur-[110px]" />
         <div
-          className="animate-drift absolute -bottom-[34%] right-[4%] h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(closest-side,#7A28F0,rgba(122,40,240,0))] opacity-40 blur-[110px]"
+          className="animate-drift absolute -bottom-[34%] right-[4%] h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(closest-side,#5D06CC,rgba(93,6,204,0))] opacity-[0.13] blur-[110px]"
           style={{ animationDelay: "-9s" }}
         />
       </div>

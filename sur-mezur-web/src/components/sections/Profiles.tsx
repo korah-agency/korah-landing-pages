@@ -26,7 +26,7 @@ export function Profiles({ dict }: { dict: Dictionary }) {
                 <span className="text-xs font-semibold uppercase tracking-[0.16em] text-violet-500">
                   {benefit.num}
                 </span>
-                <h3 className="text-xl text-white">{benefit.title}</h3>
+                <h3 className="text-xl text-mist-50">{benefit.title}</h3>
                 <p className="text-[0.9375rem] leading-relaxed text-mist-400">{benefit.body}</p>
               </article>
             </Reveal>

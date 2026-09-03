@@ -13,7 +13,7 @@ export function Problem({ dict }: { dict: Dictionary }) {
 
   return (
     <section
-      className="section-y relative border-t border-white/[0.06] bg-ink-900"
+      className="section-y relative border-t border-violet-950/[0.08] bg-ink-900"
       aria-labelledby="problem-title"
     >
       <div className="container-smz">
@@ -37,7 +37,7 @@ export function Problem({ dict }: { dict: Dictionary }) {
                 <p className="step-index transition-colors duration-500 group-hover:text-violet-500/40">
                   {step.index}
                 </p>
-                <h3 className="mt-5 text-lg text-white">{step.title}</h3>
+                <h3 className="mt-5 text-lg text-mist-50">{step.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-mist-400">{step.body}</p>
               </article>
             </Reveal>

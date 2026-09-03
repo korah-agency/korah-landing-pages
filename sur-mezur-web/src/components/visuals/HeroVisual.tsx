@@ -14,12 +14,12 @@ export function HeroVisual() {
     >
       <defs>
         <linearGradient id="hv-stroke" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#5A18C8" />
-          <stop offset="100%" stopColor="#B474FF" />
+          <stop offset="0%" stopColor="#4502AD" />
+          <stop offset="100%" stopColor="#7014E8" />
         </linearGradient>
         <radialGradient id="hv-glow" cx="50%" cy="42%" r="55%">
-          <stop offset="0%" stopColor="#6B20E8" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#6B20E8" stopOpacity="0" />
+          <stop offset="0%" stopColor="#5D06CC" stopOpacity="0.16" />
+          <stop offset="100%" stopColor="#5D06CC" stopOpacity="0" />
         </radialGradient>
       </defs>
 
@@ -34,9 +34,9 @@ export function HeroVisual() {
 
       {/* measurement bands */}
       <g opacity="0.9">
-        <path d="M230 208h100" stroke="#B474FF" strokeWidth="1.4" strokeDasharray="4 5" className="animate-pulse-soft" />
-        <path d="M230 252h100" stroke="#9A4DFF" strokeWidth="1.4" strokeDasharray="4 5" className="animate-pulse-soft" style={{ animationDelay: "0.5s" }} />
-        <path d="M230 296h100" stroke="#6B20E8" strokeWidth="1.4" strokeDasharray="4 5" className="animate-pulse-soft" style={{ animationDelay: "1s" }} />
+        <path d="M230 208h100" stroke="#7014E8" strokeWidth="1.4" strokeDasharray="4 5" className="animate-pulse-soft" />
+        <path d="M230 252h100" stroke="#5D06CC" strokeWidth="1.4" strokeDasharray="4 5" className="animate-pulse-soft" style={{ animationDelay: "0.5s" }} />
+        <path d="M230 296h100" stroke="#5D06CC" strokeWidth="1.4" strokeDasharray="4 5" className="animate-pulse-soft" style={{ animationDelay: "1s" }} />
       </g>
 
       {/* connecting line photo → phone */}
@@ -44,7 +44,7 @@ export function HeroVisual() {
 
       {/* two input photos */}
       <g stroke="url(#hv-stroke)" strokeWidth="1.2">
-        <rect x="52" y="452" width="64" height="88" rx="10" fill="rgba(255,255,255,0.03)" />
+        <rect x="52" y="452" width="64" height="88" rx="10" fill="rgba(8,4,77,0.035)" />
         <circle cx="84" cy="484" r="9" />
         <path d="M62 532l16-20 14 16 12-12 16 20" strokeOpacity="0.6" />
         <rect x="66" y="468" width="36" height="5" rx="2.5" opacity="0.5" />
@@ -52,12 +52,12 @@ export function HeroVisual() {
 
       {/* phone frame */}
       <g>
-        <rect x="300" y="210" width="196" height="400" rx="30" stroke="url(#hv-stroke)" strokeWidth="1.6" fill="rgba(255,255,255,0.02)" />
+        <rect x="300" y="210" width="196" height="400" rx="30" stroke="url(#hv-stroke)" strokeWidth="1.6" fill="rgba(8,4,77,0.03)" />
         <rect x="312" y="224" width="172" height="372" rx="18" fill="url(#hv-glow)" opacity="0.25" />
         <rect x="362" y="228" width="72" height="6" rx="3" opacity="0.55" />
 
         {/* AI landmark overlay */}
-        <g stroke="#B474FF" strokeWidth="1" opacity="0.9">
+        <g stroke="#7014E8" strokeWidth="1" opacity="0.9">
           <circle cx="398" cy="222" r="4" />
           <circle cx="352" cy="300" r="3" />
           <circle cx="444" cy="300" r="3" />
@@ -67,37 +67,37 @@ export function HeroVisual() {
         </g>
 
         {/* measurement readout */}
-        <g fontFamily="Outfit, sans-serif">
-          <text x="360" y="330" fill="#B474FF" fontSize="11" letterSpacing="3">
+        <g fontFamily="Jost, sans-serif">
+          <text x="360" y="330" fill="#7014E8" fontSize="11" letterSpacing="3">
             CHEST
           </text>
-          <text x="360" y="384" fill="#B474FF" fontSize="11" letterSpacing="3">
+          <text x="360" y="384" fill="#7014E8" fontSize="11" letterSpacing="3">
             WAIST
           </text>
-          <text x="360" y="438" fill="#B474FF" fontSize="11" letterSpacing="3">
+          <text x="360" y="438" fill="#7014E8" fontSize="11" letterSpacing="3">
             HIPS
           </text>
-          <text x="452" y="330" fill="#fff" fontSize="14" textAnchor="end">
+          <text x="452" y="330" fill="#08044D" fontSize="14" textAnchor="end">
             96
           </text>
-          <text x="452" y="384" fill="#fff" fontSize="14" textAnchor="end">
+          <text x="452" y="384" fill="#08044D" fontSize="14" textAnchor="end">
             82
           </text>
-          <text x="452" y="438" fill="#fff" fontSize="14" textAnchor="end">
+          <text x="452" y="438" fill="#08044D" fontSize="14" textAnchor="end">
             98
           </text>
-          <path d="M352 344h100M352 398h100M352 452h100" stroke="rgba(255,255,255,0.18)" strokeWidth="1" />
+          <path d="M352 344h100M352 398h100M352 452h100" stroke="rgba(8,4,77,0.16)" strokeWidth="1" />
         </g>
       </g>
 
       {/* measurement chips */}
-      <g fontFamily="Outfit, sans-serif">
-        <rect x="120" y="268" width="120" height="30" rx="15" fill="rgba(90,24,200,0.18)" stroke="#6B20E8" strokeWidth="1" />
-        <text x="148" y="288" fill="#fff" fontSize="11">
+      <g fontFamily="Jost, sans-serif">
+        <rect x="120" y="268" width="120" height="30" rx="15" fill="rgba(93,6,204,0.09)" stroke="#5D06CC" strokeWidth="1" />
+        <text x="148" y="288" fill="#08044D" fontSize="11">
           SHOULDER 46cm
         </text>
-        <rect x="120" y="318" width="120" height="30" rx="15" fill="rgba(122,40,240,0.14)" stroke="#9A4DFF" strokeWidth="1" />
-        <text x="150" y="338" fill="#fff" fontSize="11">
+        <rect x="120" y="318" width="120" height="30" rx="15" fill="rgba(93,6,204,0.07)" stroke="#5D06CC" strokeWidth="1" />
+        <text x="150" y="338" fill="#08044D" fontSize="11">
           INSEAM 79cm
         </text>
       </g>

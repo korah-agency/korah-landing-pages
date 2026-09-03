@@ -33,7 +33,7 @@ export function ForClients({ dict }: { dict: Dictionary }) {
           {benefits.map((benefit, index) => (
             <Reveal as="li" key={benefit} delay={index * 80}>
               <span className="flex items-center gap-3 text-[0.9375rem] text-mist-300">
-                <span className="grid h-6 w-6 flex-none place-items-center rounded-full bg-violet-700/30 text-violet-400">
+                <span className="grid h-6 w-6 flex-none place-items-center rounded-full bg-violet-700/30 text-violet-600">
                   <Check width={14} height={14} />
                 </span>
                 {benefit}

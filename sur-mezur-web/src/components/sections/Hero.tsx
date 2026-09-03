@@ -9,7 +9,11 @@ function Glow({ className, delay }: { className: string; delay?: string }) {
     <div
       aria-hidden
       className={`animate-drift absolute rounded-full blur-[110px] ${className}`}
-      style={delay ? { animationDelay: delay } : undefined}
+      style={{
+        // The helper never carried a fill, so the hero rendered flat.
+        background: "radial-gradient(closest-side, #7014E8, rgba(112,20,232,0))",
+        ...(delay ? { animationDelay: delay } : {}),
+      }}
     />
   );
 }
@@ -18,18 +22,18 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <section className="grain relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-24 pt-[calc(var(--nav-h)+3rem)]" aria-labelledby="hero-title">
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_-10%,#180E32_0%,#0E0720_45%,#0B0513_100%)]" />
-        <Glow className="-left-[12%] -top-[18%] h-[44rem] w-[44rem] opacity-50" />
-        <Glow className="-right-[10%] top-[14%] h-[40rem] w-[40rem] opacity-40" delay="-9s" />
-        <Glow className="bottom-[-26%] left-[36%] h-[34rem] w-[34rem] opacity-28" delay="-4s" />
-        <div className="absolute top-1/2 left-[-14%] h-[40rem] w-[40rem] -translate-y-1/2 rounded-full border border-violet-600/25 opacity-50">
-          <div className="absolute inset-[20%] rounded-full border border-dashed border-violet-600/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_-10%,#F4EEFF_0%,#FBF9FF_45%,#FFFFFF_100%)]" />
+        <Glow className="-left-[12%] -top-[18%] h-[44rem] w-[44rem] opacity-[0.17]" />
+        <Glow className="-right-[10%] top-[14%] h-[40rem] w-[40rem] opacity-[0.14]" delay="-9s" />
+        <Glow className="bottom-[-26%] left-[36%] h-[34rem] w-[34rem] opacity-[0.10]" delay="-4s" />
+        <div className="absolute top-1/2 left-[-14%] h-[40rem] w-[40rem] -translate-y-1/2 rounded-full border border-violet-600/20 opacity-70">
+          <div className="absolute inset-[20%] rounded-full border border-dashed border-violet-600/25" />
         </div>
         <div
           className="absolute inset-0 opacity-16"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(201,182,255,0.09) 1px, transparent 1px), linear-gradient(to bottom, rgba(201,182,255,0.09) 1px, transparent 1px)",
+              "linear-gradient(to right, rgba(8,4,77,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(8,4,77,0.07) 1px, transparent 1px)",
             backgroundSize: "72px 72px",
             maskImage: "radial-gradient(78% 62% at 50% 40%, #000 0%, transparent 100%)",
             WebkitMaskImage: "radial-gradient(78% 62% at 50% 40%, #000 0%, transparent 100%)",
@@ -81,7 +85,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                     className="flex items-center gap-3 text-xs uppercase tracking-[0.14em] text-mist-400"
                   >
                     {index > 0 ? (
-                      <span aria-hidden className="hidden h-3 w-px bg-white/12 sm:block" />
+                      <span aria-hidden className="hidden h-3 w-px bg-violet-950/15 sm:block" />
                     ) : null}
                     <span
                       aria-hidden

@@ -58,7 +58,7 @@ export function Pricing({ locale, dict }: { locale: Locale; dict: Dictionary }) 
                 <span className="text-xs font-semibold uppercase tracking-[0.16em] text-violet-500">
                   {plan.label}
                 </span>
-                <h3 className="text-3xl text-white">{plan.name}</h3>
+                <h3 className="text-3xl text-mist-50">{plan.name}</h3>
                 <p className="font-display text-2xl text-mist-50">
                   {plan.amount} <small className="font-sans text-xs font-medium text-mist-500">{plan.unit}</small>
                 </p>

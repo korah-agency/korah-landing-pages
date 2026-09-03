@@ -18,7 +18,7 @@ export function Differentiation({ dict }: { dict: Dictionary }) {
 
   return (
     <section
-      className="section-y relative border-t border-white/[0.06] bg-ink-900"
+      className="section-y relative border-t border-violet-950/[0.08] bg-ink-900"
       aria-labelledby="diff-title"
     >
       <div className="container-smz">
@@ -29,10 +29,10 @@ export function Differentiation({ dict }: { dict: Dictionary }) {
         />
 
         <Reveal delay={120}>
-          <div className="mt-12 overflow-x-auto rounded-2xl border border-white/10 bg-ink-800/60">
+          <div className="mt-12 overflow-x-auto rounded-2xl border border-violet-950/12 bg-ink-800/60">
             <table className="w-full min-w-[42rem] border-collapse">
               <thead>
-                <tr className="border-b border-white/12">
+                <tr className="border-b border-violet-950/14">
                   <th scope="col" className="px-6 py-5 text-left font-display text-sm font-medium text-mist-200" />
                   <th scope="col" className="px-6 py-5 text-left font-display text-sm font-medium text-mist-300">
                     {dict.diff.c1}
@@ -40,22 +40,22 @@ export function Differentiation({ dict }: { dict: Dictionary }) {
                   <th scope="col" className="px-6 py-5 text-left font-display text-sm font-medium text-mist-300">
                     {dict.diff.c2}
                   </th>
-                  <th scope="col" className="px-6 py-5 text-left font-display text-base font-medium text-violet-400">
+                  <th scope="col" className="px-6 py-5 text-left font-display text-base font-medium text-violet-600">
                     {dict.diff.c3}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row) => (
-                  <tr key={row.label} className="border-b border-white/[0.06] last:border-none hover:bg-violet-900/10">
+                  <tr key={row.label} className="border-b border-violet-950/[0.08] last:border-none hover:bg-violet-900/10">
                     <td className="px-6 py-4 text-[0.9375rem] text-mist-200">{row.label}</td>
-                    <td className={`px-6 py-4 text-[0.9375rem] ${row.trad === YES ? "text-violet-400" : "text-mist-500"}`}>
+                    <td className={`px-6 py-4 text-[0.9375rem] ${row.trad === YES ? "text-violet-600" : "text-mist-500"}`}>
                       {row.trad}
                     </td>
-                    <td className={`px-6 py-4 text-[0.9375rem] ${row.app === "—" ? "text-mist-500" : row.app === "✓" ? "text-violet-400" : "text-mist-400 text-xs"}`}>
+                    <td className={`px-6 py-4 text-[0.9375rem] ${row.app === "—" ? "text-mist-500" : row.app === "✓" ? "text-violet-600" : "text-mist-400 text-xs"}`}>
                       {row.app}
                     </td>
-                    <td className={`px-6 py-4 text-[0.9375rem] font-semibold ${row.strong ? "text-violet-300" : "text-violet-400"}`}>
+                    <td className={`px-6 py-4 text-[0.9375rem] font-semibold ${row.strong ? "text-violet-700" : "text-violet-600"}`}>
                       {row.smz}
                     </td>
                   </tr>

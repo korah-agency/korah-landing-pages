@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export function NewWay({ dict }: { dict: Dictionary }) {
   return (
     <section
-      className="section-y relative overflow-hidden bg-[radial-gradient(90%_120%_at_20%_0%,#211240_0%,#0E0720_100%)]"
+      className="section-y relative overflow-hidden bg-[radial-gradient(90%_120%_at_20%_0%,#F4EEFF_0%,#FFFFFF_100%)]"
       aria-labelledby="newway-title"
     >
       <div className="container-smz flex flex-col items-center text-center">

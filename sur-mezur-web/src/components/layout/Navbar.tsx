@@ -59,7 +59,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
           scrolled || open
-            ? "border-b border-white/[0.07] bg-ink-950/70 backdrop-blur-xl"
+            ? "border-b border-violet-950/[0.09] bg-ink-950/70 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent",
         )}
         style={{ height: "var(--nav-h)" }}
@@ -81,7 +81,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
               <li key={item.key}>
                 <a
                   href={localizePath(locale, item.hash)}
-                  className="relative rounded-full px-4 py-2 text-sm font-medium text-mist-300 transition-colors duration-300 hover:text-white after:absolute after:inset-x-4 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-violet-800 after:to-violet-500 after:transition-transform after:duration-500 after:content-[''] hover:after:scale-x-100"
+                  className="relative rounded-full px-4 py-2 text-sm font-medium text-mist-300 transition-colors duration-300 hover:text-mist-50 after:absolute after:inset-x-4 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-violet-800 after:to-violet-500 after:transition-transform after:duration-500 after:content-[''] hover:after:scale-x-100"
                 >
                   {dict.nav[item.key]}
                 </a>
@@ -110,7 +110,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
               aria-expanded={open}
               aria-controls="smz-mobile-menu"
               aria-label={open ? dict.nav.closeMenu : dict.nav.openMenu}
-              className="relative grid h-10 w-10 place-items-center rounded-full border border-white/12 text-white transition-colors duration-300 hover:border-violet-500/60 lg:hidden"
+              className="relative grid h-10 w-10 place-items-center rounded-full border border-violet-950/14 text-mist-50 transition-colors duration-300 hover:border-violet-500/60 lg:hidden"
             >
               <span className="sr-only">{open ? dict.nav.closeMenu : dict.nav.openMenu}</span>
               <span aria-hidden className="relative block h-3 w-4">
@@ -157,7 +157,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
               <li key={item.key}>
                 <a
                   href={localizePath(locale, item.hash)}
-                  className="flex items-center justify-between border-b border-white/[0.06] py-5 font-display text-3xl text-white transition-colors duration-300 hover:text-violet-400"
+                  className="flex items-center justify-between border-b border-violet-950/[0.08] py-5 font-display text-3xl text-mist-50 transition-colors duration-300 hover:text-violet-600"
                 >
                   {dict.nav[item.key]}
                   <ArrowRight className="text-mist-500" width={20} height={20} />

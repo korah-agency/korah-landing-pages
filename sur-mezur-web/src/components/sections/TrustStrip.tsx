@@ -7,7 +7,7 @@ export function TrustStrip({ dict }: { dict: Dictionary }) {
   return (
     <section
       aria-label="Sur-MeZur highlights"
-      className="overflow-hidden border-y border-white/[0.08] bg-ink-900 py-5"
+      className="overflow-hidden border-y border-violet-950/[0.10] bg-ink-900 py-5"
     >
       <div className="flex w-max animate-[smz-marquee_42s_linear_infinite] items-center gap-10">
         {doubled.map((item, index) => (

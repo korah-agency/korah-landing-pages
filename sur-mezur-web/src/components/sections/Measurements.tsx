@@ -8,17 +8,17 @@ export function Measurements({ dict }: { dict: Dictionary }) {
   const groups: Group[] = [
     {
       label: dict.measures.g1,
-      tone: "#B474FF",
+      tone: "#7014E8",
       items: [dict.measures.u1, dict.measures.u2, dict.measures.u3, dict.measures.u4, dict.measures.u5],
     },
     {
       label: dict.measures.g2,
-      tone: "#9A4DFF",
+      tone: "#5D06CC",
       items: [dict.measures.m1, dict.measures.m2, dict.measures.m3, dict.measures.m4],
     },
     {
       label: dict.measures.g3,
-      tone: "#6B20E8",
+      tone: "#5D06CC",
       items: [dict.measures.l1, dict.measures.l2, dict.measures.l3, dict.measures.l4],
     },
   ];
@@ -37,7 +37,7 @@ export function Measurements({ dict }: { dict: Dictionary }) {
           {groups.map((group, groupIndex) => (
             <Reveal key={group.label} delay={groupIndex * 120}>
               <article className="surface-card h-full p-8">
-                <p className="font-display text-xl text-white">{group.label}</p>
+                <p className="font-display text-xl text-mist-50">{group.label}</p>
                 <ul className="mt-5 flex flex-col gap-3">
                   {group.items.map((item) => (
                     <li key={item} className="flex items-center gap-3 text-[0.9375rem] text-mist-300">
