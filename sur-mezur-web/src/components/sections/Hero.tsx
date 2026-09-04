@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import type { Dictionary } from "@/i18n";
 import { localizePath, type Locale } from "@/i18n/config";
 import { ArrowRight } from "@/components/ui/Icons";
 import { Reveal } from "@/components/ui/Reveal";
-import { HeroVisual } from "@/components/visuals/HeroVisual";
 
 function Glow({ className, delay }: { className: string; delay?: string }) {
   return (
@@ -100,8 +100,17 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </Reveal>
         </div>
 
-        <Reveal from="scale" delay={220} className="mx-auto w-full max-w-[560px] justify-self-center">
-          <HeroVisual />
+        <Reveal from="scale" delay={220} className="mx-auto w-full max-w-[580px] justify-self-center">
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-violet-900/15 ring-1 ring-violet-200/50">
+            <Image
+              src="/photos/01_hero_v2.png"
+              alt="Sur-MeZur — turn two photos into body measurements for custom clothing"
+              width={2304}
+              height={1536}
+              priority
+              className="h-auto w-full object-cover"
+            />
+          </div>
         </Reveal>
       </div>
     </section>
