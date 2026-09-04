@@ -1,11 +1,11 @@
+import { siteConfig } from "@/data/site";
 import type { Dictionary } from "@/i18n";
-import { localizePath, type Locale } from "@/i18n/config";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArrowRight } from "@/components/ui/Icons";
 import { BodyModel } from "@/components/visuals/BodyModel";
 
-export function Dashboard({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+export function Dashboard({ dict }: { dict: Dictionary }) {
   const fields = [
     { k: dict.dash.name, v: "A. Kemegni" },
     { k: dict.dash.gender, v: "—" },
@@ -76,7 +76,7 @@ export function Dashboard({ locale, dict }: { locale: Locale; dict: Dictionary }
                 <span>June 2026</span>
               </div>
 
-              <a href={localizePath(locale, "#early-access")} className="btn btn-primary btn-sm mt-6 w-full">
+              <a href={siteConfig.appUrl} className="btn btn-primary btn-sm mt-6 w-full">
                 {dict.dash.cta}
                 <ArrowRight className="btn-arrow" width={14} height={14} />
               </a>

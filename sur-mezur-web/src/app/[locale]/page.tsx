@@ -14,7 +14,7 @@ import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Measurements } from "@/components/sections/Measurements";
 import { NewWay } from "@/components/sections/NewWay";
-import { Pricing } from "@/components/sections/Pricing";
+import { TryFree } from "@/components/sections/TryFree";
 import { Privacy } from "@/components/sections/Privacy";
 import { Problem } from "@/components/sections/Problem";
 import { Profiles } from "@/components/sections/Profiles";
@@ -51,7 +51,7 @@ export default async function Home({ params }: Params) {
       <HowItWorks dict={dict} />
       <Technology dict={dict} />
       <Measurements dict={dict} />
-      <Dashboard locale={active} dict={dict} />
+      <Dashboard dict={dict} />
       <Profiles dict={dict} />
       <ForTailors dict={dict} />
       <ForClients dict={dict} />
@@ -62,7 +62,7 @@ export default async function Home({ params }: Params) {
       <FabricBand dict={dict} />
       <Proof dict={dict} />
       <Privacy dict={dict} />
-      <Pricing locale={active} dict={dict} />
+      <TryFree locale={active} dict={dict} />
       <Faq dict={dict} />
       <FinalCta locale={active} dict={dict} />
     </>

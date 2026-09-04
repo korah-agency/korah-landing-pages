@@ -1,3 +1,4 @@
+import { siteConfig } from "@/data/site";
 import type { Dictionary } from "@/i18n";
 import { localizePath, type Locale } from "@/i18n/config";
 import { ArrowRight } from "@/components/ui/Icons";
@@ -66,7 +67,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
           <Reveal delay={300}>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-              <a href={localizePath(locale, "#early-access")} className="btn btn-primary">
+              <a href={siteConfig.appUrl} className="btn btn-primary">
                 {dict.hero.ctaPrimary}
                 <ArrowRight className="btn-arrow" width={16} height={16} />
               </a>

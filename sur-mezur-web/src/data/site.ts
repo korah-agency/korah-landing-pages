@@ -3,6 +3,8 @@ export const siteConfig = {
   name: "Sur-MeZur",
   tagline: "Measure smarter. Tailor better.",
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://sur-mezur.korah.tech",
+  /** The web app itself — every "start free" call to action lands here. */
+  appUrl: process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") || "https://smz-sable.vercel.app",
   email: "contact@korah.tech",
   location: {
     city: "Douala",

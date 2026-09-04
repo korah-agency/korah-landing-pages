@@ -12,7 +12,7 @@ const productLinks: Array<{ key: keyof Dictionary["footer"]; hash: string }> = [
   { key: "l2", hash: "#for-tailors" },
   { key: "l3", hash: "#for-clients" },
   { key: "l4", hash: "#technology" },
-  { key: "l5", hash: "#early-access" },
+  { key: "l5", hash: "#try-free" },
   { key: "l6", hash: "#faq" },
 ];
 

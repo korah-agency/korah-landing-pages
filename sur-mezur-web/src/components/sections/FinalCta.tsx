@@ -1,3 +1,4 @@
+import { siteConfig } from "@/data/site";
 import type { Dictionary } from "@/i18n";
 import { localizePath, type Locale } from "@/i18n/config";
 import { Reveal } from "@/components/ui/Reveal";
@@ -36,7 +37,7 @@ export function FinalCta({ locale, dict }: { locale: Locale; dict: Dictionary })
 
         <Reveal delay={220}>
           <div className="mt-11 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <a href={localizePath(locale, "#early-access")} className="btn btn-primary">
+            <a href={siteConfig.appUrl} className="btn btn-primary">
               {dict.final.ctaPrimary}
               <ArrowRight className="btn-arrow" width={16} height={16} />
             </a>

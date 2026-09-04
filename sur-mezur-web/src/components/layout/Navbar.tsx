@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { siteConfig } from "@/data/site";
 import type { Dictionary } from "@/i18n";
 import { localizePath, localizedPath, type Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
@@ -97,7 +98,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
             />
 
             <Link
-              href={localizePath(locale, "#early-access")}
+              href={siteConfig.appUrl}
               className="btn btn-primary btn-sm hidden md:inline-flex"
             >
               {dict.nav.cta}
@@ -167,7 +168,7 @@ export function Navbar({ locale, dict }: NavbarProps) {
           </ul>
 
           <div className="flex flex-col gap-6">
-            <a href={localizePath(locale, "#early-access")} className="btn btn-primary w-full">
+            <a href={siteConfig.appUrl} className="btn btn-primary w-full">
               {dict.nav.cta}
               <ArrowRight className="btn-arrow" />
             </a>
