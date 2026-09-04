@@ -344,6 +344,15 @@ const fr: Dictionary = {
     built1: "Un produit KORAH —",
     built2: "conçu à Douala, Cameroun.",
   },
+
+  inlineCta: {
+    ready: "Prêt à commencer à mesurer ?",
+    readyCta: "Essayez gratuitement",
+    firstProfile: "Votre premier profil est gratuit — sans engagement.",
+    firstProfileCta: "Commencer",
+    join: "Rejoignez Sur-MeZur dès aujourd'hui.",
+    joinCta: "Créer votre compte",
+  },
 };
 
 export default fr;

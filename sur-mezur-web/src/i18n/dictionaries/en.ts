@@ -342,6 +342,15 @@ const en = {
     built1: "A KORAH product —",
     built2: "built in Douala, Cameroon.",
   },
+
+  inlineCta: {
+    ready: "Ready to start measuring?",
+    readyCta: "Try it free",
+    firstProfile: "Your first profile is free — no commitment.",
+    firstProfileCta: "Get started",
+    join: "Join Sur-MeZur today.",
+    joinCta: "Create your account",
+  },
 } as const;
 
 export default en;

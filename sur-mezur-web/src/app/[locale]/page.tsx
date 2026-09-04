@@ -22,6 +22,7 @@ import { Proof } from "@/components/sections/Proof";
 import { Technology } from "@/components/sections/Technology";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { WhySurMeZur } from "@/components/sections/WhySurMeZur";
+import { InlineCta } from "@/components/ui/InlineCta";
 import { getDictionary } from "@/i18n";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 
@@ -49,17 +50,20 @@ export default async function Home({ params }: Params) {
       <Problem dict={dict} />
       <NewWay dict={dict} />
       <HowItWorks dict={dict} />
+      <InlineCta text={dict.inlineCta.ready} cta={dict.inlineCta.readyCta} />
       <Technology dict={dict} />
       <Measurements dict={dict} />
       <Dashboard dict={dict} />
       <Profiles dict={dict} />
       <ForTailors dict={dict} />
       <ForClients dict={dict} />
+      <InlineCta text={dict.inlineCta.firstProfile} cta={dict.inlineCta.firstProfileCta} />
       <AvatarSection dict={dict} />
       <FutureSection dict={dict} />
       <WhySurMeZur dict={dict} />
       <Differentiation dict={dict} />
       <FabricBand dict={dict} />
+      <InlineCta text={dict.inlineCta.join} cta={dict.inlineCta.joinCta} />
       <Proof dict={dict} />
       <Privacy dict={dict} />
       <TryFree locale={active} dict={dict} />
