@@ -8,22 +8,25 @@ type Props = {
 };
 
 /**
- * Lightweight inline call-to-action banner placed between sections.
- * Non-aggressive: subtle gradient background, one line of text, one button.
+ * Lightweight inline call-to-action placed between sections.
+ * Uses the same container-smz + section-y spacing as every other section,
+ * with body text and a primary button — no extra card, no border, no wrapper.
  */
 export function InlineCta({ text, cta }: Props) {
   return (
     <Reveal>
-      <div className="mx-auto my-8 max-w-xl rounded-2xl border border-violet-200/50 bg-violet-50/40 px-8 py-10 text-center backdrop-blur-sm sm:my-12">
-        <p className="text-base font-medium text-mist-400 sm:text-lg">{text}</p>
+      <div className="container-smz flex flex-col items-center py-12 text-center sm:py-16">
+        <p className="max-w-xl text-[0.9375rem] leading-relaxed text-mist-400 sm:text-lg">
+          {text}
+        </p>
         <a
           href={siteConfig.appUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary btn-sm mx-auto mt-5"
+          className="btn btn-primary mt-6"
         >
           {cta}
-          <ArrowRight className="btn-arrow" width={14} height={14} />
+          <ArrowRight className="btn-arrow" width={16} height={16} />
         </a>
       </div>
     </Reveal>
